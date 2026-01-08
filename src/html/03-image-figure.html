@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지와 피규어</title>
+    <link rel="shortcut icon" href="/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/likelion.svg" type="image/svg+xml" />
+    <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+  </head>
+  <body style="margin: 50px">
+    <div class="go-index"><a href="/index.html">Index로 이동</a></div>
+    <h1>이미지와 피규어</h1>
+    <!-- 상대경로 -->
+    <!-- width, height 속성을 생략 -->
+    <div>
+      <img src="./../assets/images/rabbit.png" alt="당근을 들고있는 토끼" />
+    </div>
+    <!-- 절대경로 -->
+    <!-- width, height 속성을 사용하여 원본 이미지 크기를 저장 -->
+    <div>
+      <img src="/src/assets/images/rabbit.png" alt="당근을 들고있는 토끼" width="265" height="281" />
+    </div>
+    <!-- 지연 로딩: 처음부터 로딩을 받지 않고 스크롤을 했을 때 이미지가 로딩되는 상황 -->
+    <!-- alt 속성의 값을 비워놓으면 스크린리더는 해당 이미지를 읽지 않음 -->
+    <!-- 대체 텍스트를 비워놓는 경우는 정보 전달의 의미가 아닌 장식상 이미지일 경우 -->
+    <div>
+      <img src="/src/assets/thumbnail/meeting-room.jpg" alt="" loading="lazy" />
+    </div>
+  </body>
+</html>
