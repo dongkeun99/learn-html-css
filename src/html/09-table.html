@@ -15,11 +15,13 @@
         border: 1px solid currentColor;
       }
 
-      th, td {
+      th,
+      td {
         border: 1px solid currentColor;
       }
 
-      thead, tfoot {
+      thead,
+      tfoot {
         background-color: #ffc;
       }
 
@@ -31,14 +33,62 @@
         width: 70px;
       }
 
-      .name, .gender {
+      .name,
+      .gender {
         width: 100px;
+      }
+
+      article table {
+        border: 1px solid red;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+
+      article th,
+      article td {
+        border: 1px solid green;
+        padding: 8px;
       }
     </style>
   </head>
   <body style="margin: 50px">
     <div class="go-index"><a href="/index.html">Index로 이동</a></div>
     <h1>테이블 관련 요소</h1>
+    <hr />
+    <article>
+      <h2 class="sr-only">과정 소개</h2>
+      <p class="sr-only" id="lectureDescription">학습시간, 난이도, 교육비 지원, 평가항목, 수료기준, 정원, 교재 정보 등을 나타낸 표</p>
+      <table aria-describedby="lectureDescription">
+        <caption>
+          입문자를 위한 Git과 HTML&CSS 과정
+        </caption>
+        <tr>
+          <th id="LearnTime">학습시간</th>
+          <td headers="LearnTime">09:00 ~ 17:00 (28시간)</td>
+          <th id="difficultylevel">난이도</th>
+          <td headers="difficultylevel">초급</td>
+        </tr>
+        <tr>
+          <th>교육비 지원</th>
+          <td>고용보험 비환급</td>
+          <th>평가항목</th>
+          <td>출석률 100%</td>
+        </tr>
+        <tr>
+          <th>수료기준</th>
+          <td>총점 80점 이상시 수료</td>
+          <th>정원</th>
+          <td>24명</td>
+        </tr>
+        <tr>
+          <th>교재정보</th>
+          <td colspan="3">
+            입문자를 위한 Git과 HTML&CSS <br />
+            HTML & CSS 웹사이트 개발과 디자인 기초 (35,000원)
+          </td>
+        </tr>
+      </table>
+    </article>
     <hr />
     <table>
       <caption>
@@ -73,7 +123,6 @@
           <td>여성</td>
         </tr>
       </tbody>
-
       <tbody>
         <tr>
           <th rowspan="6" scope="rowgroup">1조</th>
