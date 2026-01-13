@@ -13,20 +13,15 @@
   <body style="margin: 50px">
     <div class="go-index"><a href="/index.html">Index로 이동</a></div>
     <h1>picture와 source 요소</h1>
-    <!-- 디바이스 픽셀 밀도에 따라 반응형 이미지를 적용할 경우 (W descriptor) -->
+    <!-- 디바이스 픽셀 너비에 따라 반응형 이미지를 적용할 경우 (W descriptor) -->
     <picture>
-      <source srcset="/src/assets/rwd/small-550.jpg 550w,
-      /src/assets/rwd/medium-1024.jpg 1024w,
-      /src/assets/rwd/large-1600.jpg 1600w"
-      sizes="100vw" />
+      <source srcset="/src/assets/rwd/small-550.jpg 550w, /src/assets/rwd/medium-1024.jpg 1024w, /src/assets/rwd/large-1600.jpg 1600w" sizes="100vw" />
       <img src="/src/assets/rwd/image-src.png" alt="" />
     </picture>
 
     <!-- 디바이스 픽셀 밀도에 따라 반응형 이미지를 적용할 경우 (X descriptor) -->
     <picture>
-      <source srcset="/src/assets/rwd/image-1x.png 1x,
-      /src/assets/rwd/image-2x.png 2x,
-      /src/assets/rwd/image-3x.png 3x" />
+      <source srcset="/src/assets/rwd/image-1x.png 1x, /src/assets/rwd/image-2x.png 2x, /src/assets/rwd/image-3x.png 3x" />
       <img src="/src/assets/rwd/image-src.png" alt="" />
     </picture>
 
