@@ -39,7 +39,7 @@
       <button type="button" aria-labelledby="shopping">
         <img src="/src/assets/cart/icon-cart.svg" alt="" />
       </button>
-      <figurecaption id="shopping">쇼핑백</figurecaption>
+      <figcaption id="shopping">쇼핑백</figcaption>
     </figure>
     <hr />
     <figure>
@@ -47,16 +47,16 @@
       <button type="button" title="장보기">
         <img src="/src/assets/cart/icon-cart.svg" alt="" />
       </button>
-      <figurecaption>장보기</figurecaption>
+      <figcaption>장보기</figcaption>
     </figure>
     <hr />
     <figure>
       <!-- 이미지 버튼 : 접근가능한 이름 (다수) -->
-      <!-- 여러 개가 있을 때 1순위: aria-labelledby  2순위: aria-label  3순위: alt  4순위: title -->
+      <!-- 여러 개가 있을 때 1순위: aria-labelledby  a-la2순위: aribel  3순위: alt  4순위: title -->
       <button type="button" title="장보기" aria-label="카트" aria-labelledby="shoppingbag">
         <img src="/src/assets/cart/icon-cart.svg" alt="장바구니" />
       </button>
-      <figurecaption id="shoppingbag">쇼핑백</figurecaption>
+      <figcaption id="shoppingbag">쇼핑백</figcaption>
     </figure>
     <hr />
     <!-- 이미지 버튼 (SVG 요소) -->
@@ -74,10 +74,13 @@
     </figure>
     <script>
       // DOM 선택 영역
+      // changeBgBtn: 배경색을 바꿀 버튼
+      // body: 배경색이 실제로 바뀔 페이지 전체 영역
       const changeBgBtn = document.querySelector('.change-bg');
       const body = document.body;
 
       // 함수 구현 영역
+      // 랜덤한 HEX 색상 코드를 만들어주는 함수
       const getRandomColor = () => {
         const letters = '0123456789ABCDEF';
         let color = '#';
@@ -86,12 +89,16 @@
         }
         return color;
       };
-
+      // getRandomColor()로 랜덤 색상을 얻어서
+      // body의 backgroundColor에 적용
+      // 즉, 페이지 배경색을 랜덤 색으로 바꾸는 함수
       const changeBodyBgColor = () => {
         body.style.backgroundColor = getRandomColor();
       };
 
       // 이벤트 바인딩 영역
+      // 버튼이 존재할 때만 이벤트를 연결
+      // 버튼을 클릭하면 changeBodyBgColor 실행
       if (changeBgBtn) {
         changeBgBtn.addEventListener('click', changeBodyBgColor);
       }
