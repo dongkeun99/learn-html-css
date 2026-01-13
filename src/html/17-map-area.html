@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>map과 area 요소</title>
+    <link rel="shortcut icon" href="/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/likelion.svg" type="image/svg+xml" />
+    <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+  </head>
+  <body style="margin: 50px">
+    <div class="go-index"><a href="/index.html">Index로 이동</a></div>
+    <h1>map과 area 요소</h1>
+    <img usemap="#image-map" src="/src/assets/sprite/sns.png" alt="SNS" />
+    <map name="image-map">
+      <area target="_blank" alt="페이스북" href="https://facebook.com" coords="15,15,14" shape="circle" />
+      <area target="_blank" alt="인스타그램" href="/" coords="65,15,14" shape="circle" />
+      <area target="_blank" alt="유튜브" href="/" coords="101,0,129,29" shape="rect" />
+    </map>
+  </body>
+</html>
