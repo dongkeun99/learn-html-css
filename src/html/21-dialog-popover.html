@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
     <link rel="stylesheet" href="/src/common/index.css" />
     <style>
-      dialog::backdrop {
+      .panel-dialog::backdrop {
         background-color: rgba(0, 0, 0, 0.5);
       }
     </style>
@@ -33,26 +33,30 @@
       <p popover id="likelion">멋쟁이 사자처럼 프론트엔드 부트캠프 화이팅!</p>
     </div>
     <script>
-      // DOM 선택 영역
+      // ===== DOM 선택 =====
       const showDialogBtn = document.querySelector('.show-dialog');
       const closeDialogBtn = document.querySelector('.close-dialog');
       const panelDialog = document.querySelector('.panel-dialog');
 
-      // 함수 구현 영역
+      // ===== 함수 구현 =====
       const openDialog = () => {
-        panelDialog.setAttribute('open', '');
+        if (typeof panelDialog.showModal === 'function') {
+          panelDialog.showModal();
+        } else {
+          panelDialog.setAttribute('open', ''); // fallback
+        }
       };
       const closeDialog = () => {
-        panelDialog.removeAttribute('open');
+        if (typeof panelDialog.close === 'function') {
+          panelDialog.close();
+        } else {
+          panelDialog.removeAttribute('open'); // fallback
+        }
       };
 
-      // 이벤트 바인딩 영역
-      if (showDialogBtn) {
-        showDialogBtn.addEventListener('click', openDialog);
-      }
-      if (closeDialogBtn) {
-        closeDialogBtn.addEventListener('click', closeDialog);
-      }
+      // ===== 이벤트 바인딩 =====
+      showDialogBtn.addEventListener('click', openDialog);
+      closeDialogBtn.addEventListener('click', closeDialog);
     </script>
   </body>
 </html>
