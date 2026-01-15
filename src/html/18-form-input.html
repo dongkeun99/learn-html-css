@@ -9,6 +9,11 @@
     <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
     <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
     <link rel="stylesheet" href="/src/common/index.css" />
+    <style>
+      input:invalid {
+        outline: 2px solid red;
+      }
+    </style>
   </head>
   <body style="margin: 50px">
     <div class="go-index"><a href="/index.html">Index로 이동</a></div>
@@ -26,6 +31,7 @@
     <input type="url" form="bootcamp" name="yourSNS" id="yourSNS" />
     <button type="submit" form="bootcamp">전송</button>
     <hr />
+
     <!-- fieldset과 legend 요소로 연관성 있는 폼 서식을 그룹화 시킬 경우 -->
     <!-- fieldset과 legend 요소는 form 태그 안에서만 사용 가능 -->
     <!-- label 요소를 사용하여 입력 서식에 접근가능한 이름 부여하기 -->
@@ -39,15 +45,17 @@
       <fieldset>
         <legend>고객 정보</legend>
         <!-- 명시적인 레이블링 -->
+        <!-- label 밖에 input이 있고 label의 for와 input의 id가 일치해야함 -->
         <div>
           <label for="userName">이름</label>
           <input type="text" name="userName" id="userName" required />
         </div>
         <div>
           <label for="userEmail">이메일</label>
-          <input type="text" name="userEmail" id="userEmail" required placeholder="guest@likelion.net" pattern="[A-Za-z0-9!#$%&'*+/=?^_`{|}~.@-]+" />
+          <input type="email" name="userEmail" id="userEmail" required placeholder="guest@likelion.net" pattern="[A-Za-z0-9!#$%&'*+/=?^_`{|}~.@-]+" />
         </div>
         <!-- 암묵적인 레이블링 -->
+        <!-- label 안에 input이 있고 for와 id가 필요없음 -->
         <div>
           <label>
             암호
@@ -59,12 +67,12 @@
       </fieldset>
     </form>
     <hr />
+
     <!-- 다양한 입력 서식 -->
     <!-- 이미지 버튼 (submit) -->
     <div>
       <input type="image" src="/src/assets/cart/icon-cart.svg" alt="장바구니" />
     </div>
-
     <!-- 체크 박스 -->
     <fieldset>
       <legend>프론트엔드</legend>
