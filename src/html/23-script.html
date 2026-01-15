@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
     <link rel="stylesheet" href="/src/common/index.css" />
     <link rel="stylesheet" href="/src/html/styles/23-script.css" />
+    <!-- async, defer 속성 모두 html 파싱과 동시에 JS 다운로드 -->
+    <!-- async는 다운로드가 끝나는 즉시 실행. 순서 보장 안됨 -->
+    <!-- defer는 html 파싱이 끝난 뒤 실행. 순서 보장됨 -->
+    <!-- type="module"은 자동으로 defer처럼 동작 -->
     <script type="module" src="/src/html/js/23-script.js"></script>
   </head>
   <body style="margin: 50px">
