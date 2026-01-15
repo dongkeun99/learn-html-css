@@ -43,6 +43,30 @@ body p.lion {
   color: orange;
 }
 
-body p.bootcamp {
-  color: gray;
+/* p 태그 내에 인라인 스타일로 style="color: olive" 이렇게 주는 가중치는 1000점 */
+/* 인라인 스타일로 적용을 했지만 !important를 사용하면 무력화 */
+/* 그러나 !important는 유지보수 힘듦 */
+.bootcamp {
+  color: gray !important;
+}
+
+#frontend {
+  color: teal;
+}
+
+/* 아무리 많은 클래스를 사용해도 아이디 선택자보다 우선순위가 낮음 */
+/* 똑같이 요소를 아무리 많이 사용해도 클래스 선택자보다 우선순위가 낮음 */
+.like {
+  color: salmon;
+}
+
+/* 상속과 겹침 그리고 우선순위 */
+/* 점수가 무조건 높다고 항상 우선순위가 높은 것은 아님
+   부모에게 상속받은 것과 나의 것 중 나의 것이 우선순위 */
+div.likelion {
+  color: red;
+}
+
+.school {
+  color: purple;
 }
