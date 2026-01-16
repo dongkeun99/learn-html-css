@@ -36,7 +36,7 @@ h1 {
   margin-block: 10px;
 }
 
-/* 자손 결합자 */
+/* 자식 결합자 */
 .menu > li {
   list-style-type: disc;
 }
@@ -44,6 +44,7 @@ h1 {
 .menu > li > ul > li {
   list-style-type: square;
   margin-left: 20px;
+  color: yellowgreen;
 }
 
 /* 선택자 그룹화 */
