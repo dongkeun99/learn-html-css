@@ -10,21 +10,18 @@ body {
 
 /* 글자 크기 */
 .lion {
-  font-weight: 20px;
+  font-weight: bold;
   font-weight: 700;
 }
 
 /* 글자 스타일 */
 .euid {
-  font-weight: 20px;
   font-weight: 700;
   font-style: italic;
 }
 
 /* 글자 간격 또는 단어 간격 */
 .euid {
-  font-weight: 20px;
-  font-weight: 700;
   letter-spacing: 4px;
   word-spacing: 20px;
 }
