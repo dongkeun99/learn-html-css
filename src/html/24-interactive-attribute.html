@@ -43,6 +43,8 @@
           <li>팀 20시 - 몬트</li>
         </ol>
       </div>
+      <!-- div 태그에 tabindex 속성은 값을 0으로 주게되면 focusable 객체가 됨.
+       -1로 주게되면 tab키로 이동 불가 -->
       <div tabindex="0" class="voting-result" hidden>
         <ul class="voting-result-vedio">
           <li>
@@ -59,6 +61,7 @@
     </div>
     <figure>
       <img src="/src/assets/thumbnail/peaktime.jpeg" alt="피크타임 매주 수요일 밤 10시 30분 방송" width="400" />
+      <!-- contenteditable 속성은 랜더링 된 글을 편집 가능 -->
       <figcaption class="user-caption" contenteditable>PEAK TIME</figcaption>
     </figure>
   </body>
