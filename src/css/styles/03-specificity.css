@@ -8,7 +8,7 @@ a {
   color: inherit;
 }
 
-/* .go-index {
+.go-index {
   display: block;
   border: 3px double red;
   padding: 10px;
@@ -19,7 +19,7 @@ a {
   border: inherit;
   display: inherit;
   padding: inherit;
-} */
+}
 
 /* p 요소의 스타일이 겹치는 경우 우선 순위 */
 p {
@@ -38,7 +38,7 @@ p {
 
 /* 클래스 선택자의 가중치(10)가 요소 선택자의 가중치(1) 보다 높음 */
 /* 앞에 요소를 명시하면 클래스 가중치(10) + 선택자 가중치(1) => 11점 */
-/* 명시하는 요소가 많아질수록 1점 씩 높아져서 우선순위가 높아짐 */
+/* 명시하는 요소가 많아질수록 1점씩 높아져서 우선순위가 높아짐 */
 body p.lion {
   color: orange;
 }
