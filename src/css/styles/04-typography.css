@@ -3,9 +3,27 @@ body {
   font-family: 'SUIT Variable', sans-serif;
 }
 
+.unit {
+  font-size: 0.625rem;
+}
 /* 글자 크기 */
 .like {
+  background-color: #ffc;
+  /* px 단위 */
   font-size: 20px;
+  /* rem 단위 */
+  /* html 태그 기준(16px) * 2 = 32px */
+  font-size: 2rem;
+  /* em 단위 */
+  /* 부모에게 상속 받은 것(10px) * 2 = 20px */
+  font-size: 2em;
+  /* vw 단위 */
+  /* 뷰포트는 화면에 보이는 크기 */
+  /* 뷰포트 크기를 기준으로 화면을 늘이고 줄이면 폰트 사이즈도 늘었다 줄어듬 */
+  font-size: 5vw;
+  /* vw 단위와 clamp() */
+  /* 첫번째(1rem)가 최소 크기, 세번째(2rem)가 최대 크기 */
+  font-size: clamp(1rem, 2.5vw, 2rem);
 }
 
 /* 글자 크기 */
