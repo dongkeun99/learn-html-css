@@ -11,7 +11,7 @@
 /* list-style-position 속성 */
 .bootcamp {
   list-style-type: disc;
-  list-style-position: outside;
+  list-style-position: inside;
 }
 
 /* list-style 단축 속성 */
