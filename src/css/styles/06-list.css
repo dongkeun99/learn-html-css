@@ -16,5 +16,5 @@
 
 /* list-style 단축 속성 */
 .school {
-  list-style: circle inside url(/src/assets/thumbnail/new.png);
+  list-style: inside url(/src/assets/thumbnail/new.png);
 }
