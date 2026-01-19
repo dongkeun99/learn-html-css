@@ -29,7 +29,9 @@ body {
 
 /* 글자 크기 */
 .lion {
+  /* 키워드로 굵기 지정 */
   font-weight: bold;
+  /* 값으로 굵기 지정 */
   font-weight: 700;
 }
 
@@ -38,9 +40,7 @@ body {
   background-color: #fcf;
   font-size: 20px;
   font-style: italic;
-  /* 키워드로 굵기 지정 */
   font-weight: bold;
-  /* 값으로 굵기 지정 */
   font-weight: 100;
 }
 
@@ -60,7 +60,7 @@ body {
   /* 가운데 정렬(center) */
   text-align: center;
   /* 왼쪽 정렬(start) */
-  text-align: left;
+  text-align: start;
   /* 논리 값(오른쪽 정렬-end) */
   /* text-align은 블록 요소에만 가능
   vertical-align은 인라인 요소에만 가능 */
@@ -69,7 +69,7 @@ body {
 
 /* 세로 정렬 */
 .bootcamp {
-  background-color: #ccc;
+  background-color: #fcfc;
   height: 50px;
   text-align: center;
   /* 가운데 정렬 */
@@ -81,18 +81,21 @@ body {
 
 /* 줄 높이 */
 .teacher {
+  /* 20px * 100% => 20px이므로 자식의 font-size=30px, 부모에게 상속받은 line-height=20px.
+  font-size보다 line-height가 작으므로 겹쳐보임.
+  그러나 number는 계산된 값이 아니라 비율 자체가 상속돼서 자식의 font-size=30px, 부모에게 상속받은 line-height=1 * 30px => 30px.
+  font-size와 line-height가 같으므로 겹치지 않음. */
   font-size: 20px;
-  /* 부모의 line-height 속성을 자식이 상속 받은 크기(20px) 보다 자식이 가진 크기(30px) 가 더 큰 경우 글자가 겹침*/
   /* 현재 글자 크기 * 몇배 */
   /* 한줄 높이 - percentage */
-  line-height: 100%;
+  /* line-height: 100%; */
   /* 한줄 높이 - number */
   line-height: 1;
 }
 
 .seulbinim {
   background-color: #fcc;
-  font-size: 20px;
+  font-size: 30px;
   /* 양쪽 정렬 */
   text-align: justify;
   /* 첫줄 들여쓰기 */
@@ -108,7 +111,7 @@ body {
   padding: 10px;
   /* font-weight: 700;
   font-style: italic;
-  /* 소문자로 적어도 대문자로 만든 뒤 첫글자빼고 사이즈를 줄임*/
+  /* 소문자로 적어도 대문자로 만든 뒤 첫글자 빼고 사이즈를 줄임*/
   /* font-variant: small-caps;
   font-size: 20px;
   line-height: 1.5;
