@@ -17,8 +17,8 @@
   padding: 10px 20px 30px;
   padding: 10px 20px 30px 40px;
   /* margin 속성 */
-  /* normal 모델에서는 상하 방향으로 margin 병합됨 */
-  /* 그러나 flex 모델이나 grid 모델에서는 margin 병합되지 않음 */
+  /* normal 모델에서는 상하 방향으로 margin 병합되어 총 10px */
+  /* 그러나 flex 모델이나 grid 모델에서는 margin 병합되지 않아서 총 20px */
   margin: 10px;
 }
 
@@ -30,4 +30,26 @@
   border: 5px solid red;
   /* auto는 padding에서 불가 margin에서만 가능 */
   margin: 0 0 0 auto;
+}
+
+.school {
+  background-color: lime;
+  padding: 10px;
+}
+
+.school span {
+  display: inline-block;
+  /* vertical-align 속성은 block에 적용 불가 inline에만 적용 가능 */
+  vertical-align: middle;
+}
+
+/* display 속성 */
+.frontend {
+  background-color: yellow;
+  /* inline 값을 지정 */
+  /* inline은 width 같은 속성을 임의로 줄 수 없음 */
+  display: inline;
+  /* block 값을 지정 */
+  display: block;
+  width: 200px;
 }
