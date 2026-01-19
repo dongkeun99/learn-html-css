@@ -12,12 +12,16 @@
   /* border 속성 */
   border: 5px solid black;
   /* padding 속성 */
+  /* 상하좌우 10px */
   padding: 10px;
+  /* 상하 10px, 좌우 20px */
   padding: 10px 20px;
+  /* 상 10px, 좌우 20px, 하 30px */
   padding: 10px 20px 30px;
+  /* 상 10px, 우 20px, 하 30px, 좌 40px */
   padding: 10px 20px 30px 40px;
   /* margin 속성 */
-  /* normal 모델에서는 상하 방향으로 margin 병합되어 총 10px */
+  /* normal 모델에서는 상하 방향으로 margin이 병합되어 총 10px */
   /* 그러나 flex 모델이나 grid 모델에서는 margin 병합되지 않아서 총 20px */
   margin: 10px;
 }
@@ -50,6 +54,6 @@
   /* inline은 width 같은 속성을 임의로 줄 수 없음 */
   display: inline;
   /* block 값을 지정 */
-  display: block;
+  /* display: block; */
   width: 200px;
 }
