@@ -1,0 +1,35 @@
+.wrapper {
+  background: yellow;
+  border: 5px solid black;
+  overflow: hidden;
+  div {
+    height: 50px;
+  }
+  .box1 {
+    background: skyblue;
+    float: left;
+  }
+  .box2 {
+    background: salmon;
+    float: left;
+  }
+  .box3 {
+    background: pink;
+    float: left;
+    position: relative;
+    top: 20px;
+  }
+  .box4 {
+    background: lime;
+    float: left;
+  }
+}
+
+/* clear 속성 활용 예 */
+/* float에 영향을 받지 않는 clear */
+/* clear 속성은 block 서식에만 지정 가능 inline에는 불가 */
+.like {
+  background: silver;
+  /* clear: both; */
+  margin-top: 20px;
+}
