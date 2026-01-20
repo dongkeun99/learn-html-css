@@ -13,7 +13,7 @@ p {
 /* CSS 변수 사용 */
 /* var 안에 main-color가 있으면 main-color 사용 */
 /* main-color가 없으면 가장 가까운 main-color 사용 */
-/* main-color가 아닌 다른 변수가 있으며 var 안에 var를 한 번 더 랩핑해야 함 */
+/* main-color가 아닌 다른 변수가 있으면서 var 안에 var를 한 번 더 랩핑해야 함 */
 .like {
   background: var(--primary-color, #ffc);
 }
