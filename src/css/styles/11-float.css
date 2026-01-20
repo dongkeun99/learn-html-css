@@ -1,13 +1,21 @@
 .wrapper {
   background: yellow;
   border: 5px solid black;
-  overflow: hidden;
+  /* overflow: hidden; */
+  display: flow-root;
+
   div {
     height: 50px;
   }
+
+  /* float를 주면 공중에 떠있는 판정 */
   .box1 {
     background: skyblue;
     float: left;
+    width: 100px;
+    height: 50px;
+    /* span 요소의 경우 float 속성의 값이 left로 지정되어 있기 때문에 display: inline을 추가로 지정해도 적용되지 않음 */
+    display: inline;
   }
   .box2 {
     background: salmon;
@@ -29,7 +37,25 @@
 /* float에 영향을 받지 않는 clear */
 /* clear 속성은 block 서식에만 지정 가능 inline에는 불가 */
 .like {
-  background: silver;
+  background: #ffc;
   /* clear: both; */
   margin-top: 20px;
+
+  img {
+    width: 100px;
+    border-radius: 50%;
+    float: left;
+    shape-outside: circle(50%);
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+/* overflow 속성 */
+/* hidden: 자식 요소가 부모의 크기를 넘어서게 되면 넘어서는 것을 감춰버림 */
+.lion {
+  background: #fcf;
+  width: 200px;
+  height: 150px;
+  overflow: hidden;
 }
