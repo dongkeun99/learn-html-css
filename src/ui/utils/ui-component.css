@@ -1,3 +1,12 @@
+/* ui - body 여백 */
+.m-20 {
+  margin: 20px;
+}
+
+.m-50 {
+  margin: 50px;
+}
+
 /* copy component */
 .copy-component {
   display: flex;
