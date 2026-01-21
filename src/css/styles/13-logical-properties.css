@@ -1,0 +1,57 @@
+/* 논리 속성 */
+/* margin 관련 논리 속성 */
+p {
+  margin-block: 10px;
+  margin-inline: auto;
+}
+.like {
+  /* writing-mode: horizental-tb을 사용하면 글은 가로로, 가로 100, 세로 200 그대로 랜더링됨 */
+  /* writing-mode: vertical-lr을 사용하면 글은 세로로, 가로 100, 세로 200이 아닌 가로 200, 세로 100으로 랜더링됨 */
+  writing-mode: vertical-lr;
+  background: var(--yellow);
+  overflow: hidden;
+  /* width 대신에 inline-size 사용 가능*/
+  inline-size: 100px;
+  /* height 대신에 block-size 사용 가능 */
+  block-size: 200px;
+}
+
+/* padding 관련 논리 속성 */
+/* 좌우는 inline / 상하는 block */
+/* 시작은 start / 끝은 end */
+.lion {
+  background: var(--pink);
+  padding-block-start: 10px;
+  padding-inline-end: 10px;
+  padding-block-end: 10px;
+  padding-inline-start: 10px;
+}
+
+/* position 관련 논리 속성 */
+.euid {
+  background: var(--mint);
+  block-size: 100px;
+  position: relative;
+
+  span {
+    background: var(--lilac);
+    position: absolute;
+    /* inset-block-start: 0;
+    inset-inline-end: 0;
+    inset-block-end: 0;
+    inset-inline-start: 0; */
+    /* 안쓰고 싶은 부분을 auto */
+    inset: auto 0 0 auto;
+  }
+}
+
+/* float 속성에서 사용하는 논리 값 */
+.bootcamp {
+  background: var(--aqua);
+
+  .school {
+    background: var(--lemon);
+    padding: 10px;
+    float: inline-end;
+  }
+}
