@@ -1,13 +1,11 @@
 /* 컴포넌트 */
 .term {
-  --text-color: #296897;
-  --base-text-size: 1rem;
+  --text-color: var(--terms-blue);
   --image-gap: 16px;
   --image-size: 60px;
   --figure-size: calc(var(--image-size) + var(--image-gap));
 
   line-height: 1.5;
-  font-size: var(--base-text-size, 16px);
 
   b {
     font-weight: 700;
@@ -30,5 +28,53 @@
 
   p {
     font-size: 0.875em;
+  }
+
+  /* &:nth-of-type(even) {
+    b {
+      float: left;
+    }
+
+    figure {
+      float: right;
+      margin-right: 0;
+      margin-left: var(--image-gap);
+    }
+  } */
+}
+
+/* 레이아웃 */
+.terms {
+  --border-color: var(--terms-gray-700);
+  --start-color: var(--terms-gray-600);
+  --end-color: var(--terms-gray-500);
+
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 16px;
+  background: linear-gradient(var(--start-color), var(--end-color));
+
+  .terms-heading {
+    font-size: 1rem;
+    font-weight: 900;
+    margin-bottom: 16px;
+  }
+
+  .term {
+    margin-top: 12px;
+  }
+
+  .cross {
+    background: #ffc;
+
+    b {
+      float: left;
+    }
+
+    figure {
+      float: right;
+      margin-right: 0;
+      margin-left: var(--image-gap);
+    }
   }
 }
