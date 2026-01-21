@@ -29,18 +29,6 @@
   p {
     font-size: 0.875em;
   }
-
-  /* &:nth-of-type(even) {
-    b {
-      float: left;
-    }
-
-    figure {
-      float: right;
-      margin-right: 0;
-      margin-left: var(--image-gap);
-    }
-  } */
 }
 
 /* 레이아웃 */
@@ -50,8 +38,8 @@
   --end-color: var(--terms-gray-500);
 
   border: 1px solid var(--border-color);
-  border-radius: 10px;
   padding: 16px;
+  border-radius: 8px;
   background: linear-gradient(var(--start-color), var(--end-color));
 
   .terms-heading {
@@ -65,8 +53,6 @@
   }
 
   .cross {
-    background: #ffc;
-
     b {
       float: left;
     }
