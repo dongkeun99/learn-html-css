@@ -6,6 +6,7 @@
   --figure-size: calc(var(--image-size) + var(--image-gap));
 
   line-height: 1.5;
+  display: flow-root;
 
   b {
     font-weight: 700;
