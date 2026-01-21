@@ -22,6 +22,7 @@
     margin-right: var(--image-gap);
 
     img {
+      float: left;
       width: var(--image-size);
       height: auto;
     }
