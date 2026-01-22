@@ -11,7 +11,7 @@
   b {
     font-weight: 700;
     font-size: 0.9375em;
-    color: var(--text-color, #296897);
+    color: var(--text-color);
     float: right;
     width: calc(100% - var(--figure-size));
     margin-bottom: 4px;
