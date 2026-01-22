@@ -2,6 +2,7 @@
 
 /* relative 값 - 상대 위치 */
 /* position: relative를 활용하여 상자 그림자 스타일링 */
+/* 자기 자신이 기준이며 자식 absolute들의 기준이 되기도 함 */
 .shadow {
   margin-block: 10px;
   background-color: black;
@@ -16,6 +17,8 @@ h3 {
 }
 
 /* absolute 값 - 절대 위치 */
+/* span이 조상으로 계속 올라가며 position: relative를 만나면 그 조상을 기준으로 삼음 (없으면 기준은 body) */
+/* relative를 안주면 화면 오른쪽 아래에 배치되고, relative를 주면 부모 박스 안에서 오른쪽 아래에 배치됨*/
 .wrapper {
   padding: 20px;
   border: 1px solid green;
@@ -36,7 +39,8 @@ h3 {
   font-size: 14px;
 }
 
-/* fixed 값 - 뷰토프 기준 고정 위치 */
+/* fixed 값 - 뷰포트 기준 고정 위치 */
+/* 뷰포트 기준이므로 스크롤을 해도 위치는 바뀌지 않음 */
 h2 {
   background-color: #cfc;
 }
@@ -46,5 +50,5 @@ h2 span {
   position: fixed;
   top: 10px;
   right: 10px;
-  z-index: 10;
+  z-index: 1;
 }
