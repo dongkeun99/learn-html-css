@@ -5,7 +5,6 @@
   line-height: 1.5;
   display: flow-root;
   text-transform: uppercase;
-  width: 367x;
 
   li,
   a,
@@ -24,6 +23,7 @@
 
 /* inline-block 값을 활용한 레이아웃 */
 .utility-bar.inline-block {
+  /* inline-block 요소 사이에 생기는 공백 제거용 */
   font-size: 0;
   line-height: 1.5;
   text-transform: uppercase;
@@ -35,8 +35,8 @@
   }
 
   a {
-    padding: 7px;
     display: inline-block;
+    padding: 7px;
   }
 
   span {
