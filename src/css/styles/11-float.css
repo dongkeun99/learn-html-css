@@ -35,13 +35,15 @@
 }
 
 /* clear 속성 활용 예 */
-/* float에 영향을 받지 않는 clear */
+/* float 옆에 배치되지 않게 만드는 것이 clear */
 /* clear 속성은 block 서식에만 지정 가능 inline에는 불가 */
 .like {
   background: #ffc;
   clear: both;
   margin-top: 20px;
 
+  /* shape-outside 속성 */
+  /* 이미지의 모양에 따라 글의 배치가 달라짐 */
   img {
     width: 100px;
     border-radius: 50%;
