@@ -9,7 +9,7 @@
   /* 플렉스 아이템의 방향 */
   /* row는 왼쪽에서 오른쪽으로. row가 기본 값, row-reverse는 반대 */
   /* float에서 inline-end로 준 것과 같음 */
-  /* column은 위에서 아래로. column이 기본 값 column-reverse는 반대 */
+  /* column은 위에서 아래로. column이 기본 값, column-reverse는 반대 */
   flex-direction: row;
   /* 플렉스 아이템의 줄바꿈 */
   inline-size: 300px;
@@ -23,8 +23,11 @@
   inline-size: 540px;
   justify-content: end;
   justify-content: center;
+  /* 첫 항목은 시작 부분에, 마지막 항목은 끝 부분에 밀착 */
   justify-content: space-between;
+  /* 사이에 있는 여백의 절반을 첫 항목은 왼쪽에, 마지막 항목은 오른쪽에 가짐 */
   justify-content: space-around;
+  /* 첫 항목의 왼쪽, 마지막 항목의 오른쪽, 사이 여백 모두 동일한 여백을 가짐 */
   justify-content: space-evenly;
   justify-content: start;
 
@@ -39,15 +42,20 @@
   /* 여러줄 정렬 */
   align-content: end;
   align-content: center;
+  /* between, around, evenly 모두 justify-content에서 설명한 것과 똑같음. 방향이 좌우(가로축)인지 상하(세로축)인지만 다를 뿐 */
   align-content: space-between;
   align-content: space-around;
   align-content: space-evenly;
   align-content: start;
 
   /* 갭 (아이템 사이의 여백) */
+  /* 상하좌우 방향 갭 생김 */
   gap: 20px;
+  /* 상위 아이템과 하위 아이템의 갭 */
   row-gap: 30px;
-  column-gap: 50px;
+  /* 왼쪽 아이템과 오른쪽 아이템의 갭 */
+  column-gap: 40px;
+  /* 첫 번째가 row-gap, 두 번째가 column-gap */
   gap: 20px 40px;
 
   > span {
@@ -82,7 +90,7 @@
     float: inline-start;
 
     /* &:nth-child(n + 2) {
-      margin-inline-start: 38px;
+      margin-inline-start: 31px;
     } */
   }
 }
@@ -95,9 +103,11 @@
   /* 너비 / 높이 지정 (논리 속성) */
   block-size: 80px;
   inline-size: 150px;
+  /* inline-block을 값으로 줄 때는 text-align, align-content 속성만 가능 */
   display: inline-block;
   text-align: center;
   align-content: center;
+  /* inline-flex를 값으로 줄 때는 justify-content, align-items 속성만 가능 */
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -142,7 +152,7 @@
       order: -1;
       flex-grow: 1;
       flex-grow: 0;
-      flex-shrink: 2;
+      flex-shrink: 1;
     }
 
     &:nth-child(even) {
@@ -150,7 +160,7 @@
       order: 1;
       flex-grow: 2;
       flex-grow: 0;
-      flex-shrink: 1;
+      flex-shrink: 2;
     }
   }
 
