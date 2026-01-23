@@ -18,7 +18,7 @@
   /* 플렉스 아이템 방향과 플렉스 아이템 줄바꿈을 지정할 수 있는 단축 속성 */
   flex-flow: row wrap;
 
-  /* 메인축 정렬 */
+  /* 메인축 (X축, 가로축) 정렬 */
   block-size: 150px;
   inline-size: 540px;
   justify-content: end;
@@ -27,12 +27,13 @@
   justify-content: space-around;
   justify-content: space-evenly;
   justify-content: start;
-  /* 교차축 정렬 */
+
+  /* 교차축 (Y축, 세로축) 정렬 */
   align-items: stretch;
   align-items: start;
   align-items: end;
   align-items: baseline;
-  /* 옆의 크기에 따라 center에 정렬 됨 */
+  /* 옆의 크기를 기준으로 center에 정렬 됨 */
   align-items: center;
 
   /* 여러줄 정렬 */
@@ -73,16 +74,16 @@
   background: var(--yellow);
 
   display: flow-root;
-  inline-size: 502px;
+  inline-size: 500px;
   block-size: 50px;
 
   > span {
     background: var(--pink);
     float: inline-start;
 
-    &:nth-child(n + 2) {
+    /* &:nth-child(n + 2) {
       margin-inline-start: 38px;
-    }
+    } */
   }
 }
 
@@ -93,7 +94,7 @@
   padding: 10px;
   /* 너비 / 높이 지정 (논리 속성) */
   block-size: 80px;
-  /* inline-size: 150px; */
+  inline-size: 150px;
   display: inline-block;
   text-align: center;
   align-content: center;
@@ -108,6 +109,7 @@
   inline-size: 500px;
 
   > div {
+    font-size: 0.95rem;
     background: var(--pink);
     inline-size: 400px;
     margin-inline: auto;
