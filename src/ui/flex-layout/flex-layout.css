@@ -17,27 +17,32 @@ body {
   background: var(--pink);
   block-size: 50px;
 }
-/* 네비게이션 */
+
+/* 내비게이션 */
 .navigation {
   background: var(--mint);
   block-size: 50px;
 }
+
 /* 메인 */
 .main {
   background: var(--orange);
   flex: 1;
 }
+
 /* 섹션 */
 .euid,
 .likelion {
   background: var(--aqua);
   block-size: 50%;
 }
+
 /* 사이드바 */
 .sidebar {
   background: var(--lavender);
   block-size: 100px;
 }
+
 /* 푸터 */
 .footer {
   background: var(--gray);
@@ -49,11 +54,43 @@ body {
   .main {
     display: flex;
     flex-flow: nowrap row;
+    align-items: stretch;
 
     .euid,
     .likelion {
       flex: 1;
       block-size: auto;
     }
+  }
+}
+
+@media (width >= 1025px) {
+  .container {
+    display: flex;
+    flex-flow: wrap row;
+    align-content: start;
+  }
+
+  .header,
+  .navigation,
+  .footer {
+    inline-size: 100%;
+  }
+
+  /* 메인 태그를 없는 것처럼 하는 display의 값 */
+  .main {
+    display: contents;
+    flex: inital;
+
+    .euid,
+    .likelion {
+      inline-size: 30%;
+      block-size: calc(100% - 150px);
+    }
+  }
+
+  .sidebar {
+    inline-size: 40%;
+    block-size: auto;
   }
 }
