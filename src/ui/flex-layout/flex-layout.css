@@ -55,6 +55,7 @@ body {
   }
 
   @media (width >= 1025px) {
+    /* 메인 태그를 없는 것처럼 하는 display의 값 */
     display: contents;
     flex: inital;
 
@@ -93,16 +94,5 @@ body {
     @media (width >= 1025px) {
       inline-size: 100%;
     }
-  }
-}
-
-@media (width >= 1025px) {
-  /* 메인 태그를 없는 것처럼 하는 display의 값 */
-  .main {
-  }
-
-  .sidebar {
-    inline-size: 40%;
-    block-size: auto;
   }
 }
