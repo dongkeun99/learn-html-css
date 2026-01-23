@@ -57,7 +57,7 @@ body {
   @media (width >= 1025px) {
     /* 메인 태그를 없는 것처럼 하는 display의 값 */
     display: contents;
-    flex: inital;
+    flex: initial;
 
     .euid,
     .likelion {
@@ -65,34 +65,32 @@ body {
       block-size: calc(100% - 150px);
     }
   }
+}
 
-  /* 섹션 */
-  .euid,
-  .likelion {
-    background: var(--aqua);
-    block-size: 50%;
+/* 섹션 */
+.euid,
+.likelion {
+  background: var(--aqua);
+  block-size: 50%;
+}
+
+/* 사이드바 */
+.sidebar {
+  background: var(--lavender);
+  block-size: 100px;
+
+  @media (width >= 1025px) {
+    inline-size: 40%;
+    block-size: auto;
   }
+}
 
-  /* 사이드바 */
-  .sidebar {
-    background: var(--lavender);
-    block-size: 100px;
+/* 푸터 */
+.footer {
+  background: var(--gray);
+  block-size: 50px;
 
-    @media (width >= 1025px) {
-      .sidebar {
-        inline-size: 40%;
-        block-size: auto;
-      }
-    }
-  }
-
-  /* 푸터 */
-  .footer {
-    background: var(--gray);
-    block-size: 50px;
-
-    @media (width >= 1025px) {
-      inline-size: 100%;
-    }
+  @media (width >= 1025px) {
+    inline-size: 100%;
   }
 }
