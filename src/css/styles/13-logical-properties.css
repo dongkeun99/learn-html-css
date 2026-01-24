@@ -36,11 +36,11 @@ p {
   span {
     background: var(--lilac);
     position: absolute;
-    /* inset-block-start: 0;
+    inset-block-start: 0;
     inset-inline-end: 0;
     inset-block-end: 0;
-    inset-inline-start: 0; */
-    /* 안쓰고 싶은 부분을 auto */
+    inset-inline-start: 0;
+    /* 붙이고 싶은 방향을 0, 붙이지 않고 싶은 방향을 auto */
     inset: auto 0 0 auto;
   }
 }
