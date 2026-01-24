@@ -35,9 +35,10 @@
   align-items: stretch;
   align-items: start;
   align-items: end;
+  /* 같은 축에 있는 다른 아이템들의 내부 텍스트들과 라인을 맞춤 */
   align-items: baseline;
   /* 옆의 크기를 기준으로 center에 정렬 됨 */
-  align-items: center;
+  /* align-items: center; */
 
   /* 여러줄 정렬 */
   align-content: end;
@@ -89,9 +90,10 @@
     background: var(--pink);
     float: inline-start;
 
-    /* &:nth-child(n + 2) {
+    /* 두 번째부터 이후의 모든 값 */
+    &:nth-child(n + 2) {
       margin-inline-start: 31px;
-    } */
+    }
   }
 }
 
@@ -142,11 +144,13 @@
     inline-size: 100px;
     /* auto는 남는 크기를 비율로 나눠 원래 크기에 더하는 것 */
     flex-basis: auto;
+    /* 0으로 설정하면 컨텐츠 주변에 여백이 고려되지 않음 */
     flex-basis: 0;
     align-content: center;
     /* 모자란 20이 4개 이므로 총 80. 80을 5개씩 나누면 16. 100px에서 16씩 빼면 84px */
     flex-basis: 100px;
 
+    /* 홀수 번째만 선택 */
     &:nth-child(odd) {
       background: var(--mint);
       order: -1;
@@ -155,6 +159,7 @@
       flex-shrink: 1;
     }
 
+    /* 짝수 번째만 선택 */
     &:nth-child(even) {
       background: var(--lavender);
       order: 1;
@@ -165,6 +170,7 @@
   }
 
   /* 플렉스 속성은 flex-grow, flex-shrink, flex-basis의 단축 속성 */
+  /* 기본 값은 0, 1, auto */
   .bootcamp-item1 {
     /* flex grow: 0, shrink: 0, basis: auto */
     flex: none !important;
