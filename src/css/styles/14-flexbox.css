@@ -38,7 +38,7 @@
   /* 같은 축에 있는 다른 아이템들의 내부 텍스트들과 라인을 맞춤 */
   align-items: baseline;
   /* 옆의 크기를 기준으로 center에 정렬 됨 */
-  /* align-items: center; */
+  align-items: center;
 
   /* 여러줄 정렬 */
   align-content: end;
