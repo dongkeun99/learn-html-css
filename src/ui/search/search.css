@@ -55,18 +55,6 @@
     display: flex;
     flex-wrap: nowrap;
     gap: 12px;
-    margin-inline: 8px;
-  }
-
-  .search-word {
-    border: none;
-  }
-
-  .search-circle {
-    display: flex;
-    flex-wrap: nowrap;
-
-    @media (width >= 768px) {
-    }
+    margin-inline: 10px;
   }
 }
