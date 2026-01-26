@@ -66,7 +66,6 @@
 /* min-width: 200px; */
 /* width: clamp(200px, 10vw, 400px); */
 /* .notifications {
-  box-shadow: 0 0 0 2px red;
   display: flex;
   flex-flow: nowrap column;
   row-gap: 16px;
@@ -85,7 +84,6 @@
 .notifications {
   --spacing-y: 20px;
 
-  box-shadow: 0 0 0 2px red;
   display: flex;
   flex-flow: wrap row;
   row-gap: 16px;
