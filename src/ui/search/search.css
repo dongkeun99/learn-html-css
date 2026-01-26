@@ -18,7 +18,7 @@
 
 /* 검색 버튼 */
 .button-circle {
-  background: green;
+  background: #03cc5c;
   inline-size: 24px;
   aspect-ratio: 1/1;
   border: 0;
@@ -35,5 +35,35 @@
     border-radius: 50%;
     inset: 50% auto auto 50%;
     transform: translate(-50%, -50%);
+  }
+}
+
+.search-bar {
+  display: flex;
+  flex-flow: nowrap row;
+  padding: 12px;
+  inline-size: 320px;
+  block-size: 52px;
+  border: 2px solid #03cc5c;
+  border-radius: 40px;
+
+  @media (width >= 768px) {
+    inline-size: auto;
+  }
+
+  .naver {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 12px;
+    margin-inline: 8px;
+  }
+
+  .search-word {
+    border: none;
+  }
+
+  .search-circle {
+    display: flex;
+    flex-wrap: nowrap;
   }
 }
