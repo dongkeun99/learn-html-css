@@ -1,37 +1,58 @@
 /* 컴포넌트 */
 .notification {
-  /* width에 padding과 border는 포함, margin만 더해짐 */
-  box-shadow: 0 0 0 1px red;
-  block-size: 100px;
+  --black: #121212;
+  --green: #22be61;
+  --gray: #9b9a90;
+  --white: #fff;
+
+  --point-color: var(--green);
+  --text-color: var(--gray);
+  --bg-color: var(--white);
+  --border-color: var(--gray);
+  --icon-size: 28px;
+  --spacing: 20px;
+
+  line-height: 1.5;
+  font-size: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
   display: flex;
-  flex-flow: wrap column;
-  padding: 20px;
+  flex-flow: nowrap row;
+  padding: var(--spacing);
+  column-gap: var(--spacing);
+  align-items: center;
 
   /* 알림 아이콘 */
   .notification-icon {
-    inline-size: 28px;
-    block-size: 28px;
-    margin-block: 16px;
+    inline-size: var(--icon-size);
+    block-size: var(--icon-size);
+  }
+
+  /* 알림 컨텐츠 */
+  .notification-content {
+    position: relative;
+    /* flex-grow:1, flex-shrink:1, flex-basis: 0 */
+    flex: 1;
   }
 
   /* 알림 제목 */
   .notification-subject {
-    background: yellow;
-    font-size: 18px;
+    font-size: 1.125em;
     font-weight: 700;
-    line-height: 1.5;
-    color: greem;
+    color: var(--point-color);
   }
+
   /* 알림 내용 */
   p {
-    font-size: 14px;
-    columns: silver;
-    line-height: 1.5;
+    font-size: 0.875em;
+    color: var(--text-color);
   }
+
   /* 알림 시간 */
   time {
-    font-size: 12px;
-    color: green;
-    line-height: 1.5;
+    font-size: 0.75em;
+    color: var((--point-color));
+    position: absolute;
+    inset: 0 0 auto auto;
   }
 }
