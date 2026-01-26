@@ -29,7 +29,7 @@
   &::before {
     content: '';
     position: absolute;
-    inline-size: 50%;
+    inline-size: 40%;
     aspect-ratio: 1/1;
     background: #fff;
     border-radius: 50%;
@@ -65,5 +65,8 @@
   .search-circle {
     display: flex;
     flex-wrap: nowrap;
+
+    @media (width >= 768px) {
+    }
   }
 }
