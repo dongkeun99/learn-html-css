@@ -26,12 +26,15 @@
   .notification-icon {
     inline-size: var(--icon-size);
     block-size: var(--icon-size);
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
   }
 
-  /* 알림 컨텐츠 */
+  /* 알림 콘텐츠 영역 */
   .notification-content {
     position: relative;
-    /* flex-grow:1, flex-shrink:1, flex-basis: 0 */
+    /* flex-grow: 1 , flex-shrink: 1 , flex-basis: 0 */
     flex: 1;
   }
 
@@ -51,8 +54,62 @@
   /* 알림 시간 */
   time {
     font-size: 0.75em;
-    color: var((--point-color));
+    color: var(--point-color);
     position: absolute;
     inset: 0 0 auto auto;
+  }
+}
+
+/* 레이아웃 */
+/* flex (column) 일 경우 - 1단 */
+/* 최소 크기가 동작하지 않음. 확인 필요 */
+/* min-width: 200px; */
+/* width: clamp(200px, 10vw, 400px); */
+/* .notifications {
+  box-shadow: 0 0 0 2px red;
+  display: flex;
+  flex-flow: nowrap column;
+  row-gap: 16px;
+
+  @media (width>= 768px) {
+    flex-flow: wrap row;
+    column-gap: 20px;
+
+    .notification {
+      inline-size: calc(50% - 10px);
+    }
+  }
+} */
+
+/* flex (row) 일 경우 - 1단 */
+.notifications {
+  --spacing-y: 20px;
+
+  box-shadow: 0 0 0 2px red;
+  display: flex;
+  flex-flow: wrap row;
+  row-gap: 16px;
+
+  @media (width>= 768px) {
+    column-gap: var(--spacing-y);
+  }
+
+  @media (width>= 1280px) {
+    flex-wrap: nowrap;
+  }
+
+  .notification {
+    inline-size: 100%;
+
+    /* 2단 */
+    @media (width>= 768px) {
+      inline-size: calc(50% - (var(--spacing-y) / 2));
+    }
+
+    /* 4단 */
+    @media (width>= 1280px) {
+      inline-size: auto;
+      flex: 1;
+    }
   }
 }
