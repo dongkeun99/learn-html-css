@@ -18,12 +18,12 @@
 
   display: inline-flex;
   flex-flow: nowrap row;
-  /* a 요소의 크기가 영문 스펠링 영역만큼만 적용되도록 가로 크기를 글자크기의 70%로 지정 */
+  /* a 요소의 크기가 영문 스펠링 영역만큼만 적용되도록 가로 크기를 글자 크기의 70%로 지정 */
   inline-size: calc(var(--text-size) * 0.7);
 
   .text {
     /* 글자 일부가 잘리지 않도록 하려면 글자 크기와 동일한 상자 크기 지정이 필요 */
-    /* .text 영역은 플렉스 아이템이기때문에 inline-size 지정이 가능함. */
+    /* .text 영역은 플렉스 아이템이기 때문에 inline-size 지정이 가능함. */
     inline-size: var(--text-size);
     line-height: 0.7;
     font-size: var(--text-size);
@@ -37,7 +37,7 @@
     /* 글자 색상을 투명하게 설정하여 텍스트 뒤쪽 그라디언트 색상이 보이도록 하기 */
     color: transparent;
     /* 텍스트 위치를 X축으로 -2px 이동 */
-    /* translate 속성으로 사용 (transform 속성에서 함수로도 사용할 수 있음) */
+    /* translate 속성 사용 (transform 속성에서 함수로도 사용할 수 있음) */
     translate: -2px 0;
   }
 }
@@ -75,7 +75,6 @@
     &:disabled,
     &[disabled] {
       background-color: var(--gray-100);
-      color: red;
     }
   }
 }
@@ -113,6 +112,7 @@
   display: flex;
   flex-flow: nowrap row;
   justify-content: start;
+  /* align-items는 기본 값이 stretch */
   align-items: center;
   column-gap: 12px;
 
@@ -125,7 +125,6 @@
   }
 
   .search-form {
-    background: yellow;
     display: contents;
   }
 
