@@ -1,0 +1,87 @@
+html,
+body {
+  block-size: 100%;
+}
+
+.container {
+  background: var(--yellow);
+  block-size: 80%;
+  display: flex;
+  flex-flow: column nowrap;
+
+  @media (width >= 1025px) {
+    flex-flow: wrap row;
+    align-content: start;
+  }
+}
+
+.header {
+  background: var(--pink);
+  block-size: 50px;
+
+  @media (width >= 1025px) {
+    inline-size: 100%;
+  }
+}
+
+.navigation {
+  background: var(--mint);
+  block-size: 50px;
+
+  @media (width >= 1025px) {
+    inline-size: 100%;
+  }
+}
+
+.main {
+  background: var(--aqua);
+  flex: 1;
+
+  @media (768px >= width >= 481px) {
+    display: flex;
+    flex-flow: nowrap row;
+    align-items: stretch;
+
+    .euid,
+    .likelion {
+      flex: 1;
+      block-size: auto;
+    }
+  }
+
+  @media (width >= 1025px) {
+    display: contents;
+    flex: initial;
+
+    .euid,
+    .likelion {
+      inline-size: 30%;
+      block-size: calc(100% - 150px);
+    }
+  }
+}
+
+.euid,
+.likelion {
+  background: var(--dark-blue);
+  block-size: 50%;
+}
+
+.sidebar {
+  background: var(--lavender);
+  block-size: 100px;
+
+  @media (width >= 1025px) {
+    inline-size: 40%;
+    block-size: auto;
+  }
+}
+
+.footer {
+  background: var(--orange);
+  block-size: 50px;
+
+  @media (width >= 1025px) {
+    inline-size: 100%;
+  }
+}
