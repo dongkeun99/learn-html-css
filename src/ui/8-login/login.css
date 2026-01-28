@@ -50,7 +50,6 @@
     color: var(--red-100);
     font-size: 12px;
     margin-block-start: 8px;
-    display: none;
   }
 
   input:user-invalid + .error-message {
@@ -192,7 +191,7 @@
 .header {
   padding: 70px 0 45px;
 
-  @media (width>=768px) {
+  @media (width >= 768px) {
     padding: 100px 0 50px;
   }
 
@@ -224,7 +223,7 @@
     flex-flow: nowrap row;
     align-items: center;
 
-    @media (width <= 768px) {
+    @media (width < 768px) {
       justify-content: end;
 
       .new-window-link,
