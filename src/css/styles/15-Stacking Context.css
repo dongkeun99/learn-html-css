@@ -1,0 +1,127 @@
+.like,
+.lion,
+.euid {
+  border: 1px solid red;
+  padding: 10px;
+
+  div {
+    inline-size: 100px;
+    block-size: 50px;
+    border: 1px solid black;
+    text-align: center;
+    align-content: center;
+  }
+
+  div:nth-child(1) {
+    /* rgba 함수 */
+    background: rgba(255, 0, 0, 0.5);
+    background: rgba(255, 255, 0, 1);
+  }
+
+  div:nth-child(2) {
+    /* rgb 함수 */
+    background: rgb(0 255 0 / 0.5);
+    background: rgb(0 255 255 / 1);
+  }
+
+  div:nth-child(3) {
+    /* 16진수 + 투명도 */
+    background: #00ff3322;
+    background: #00ff33ff;
+  }
+
+  div:nth-child(4) {
+    /* 키워드 */
+    background: pink;
+  }
+
+  div:nth-child(5) {
+    /* hsla 함수 */
+    background: hsla(270, 50%, 50%, 0.5);
+    background: hsla(270, 50%, 50%, 1);
+  }
+}
+
+/* z-index 속성 */
+/* position을 주지 않으면 아무것도 적용이 되지 않음 */
+.like {
+  position: relative;
+  block-size: 100px;
+
+  div {
+    position: absolute;
+  }
+
+  .like-item1 {
+    z-index: 2;
+    inset: 20px auto auto 20px;
+  }
+
+  .like-item3 {
+    z-index: 1;
+    inset: 30px auto auto 30px;
+  }
+}
+
+/* flex + z-index + margin(음수) */
+.lion {
+  display: flex;
+  flex-flow: nowrap row;
+
+  div {
+    block-size: 100px;
+    border-radius: 50%;
+  }
+
+  div:nth-child(n + 2) {
+    margin-inline-start: -30px;
+  }
+
+  .lion-item3 {
+    z-index: 3;
+  }
+
+  div:hover {
+    z-index: 1;
+  }
+}
+
+.euid {
+  div:nth-child(n + 2) {
+    margin-block-start: -20px;
+  }
+
+  div.euid-item4 {
+    opacity: 0.5;
+    background: red;
+    z-index: 2;
+  }
+
+  div.euid-item5 {
+    opacity: 0.7;
+    z-index: 1;
+  }
+}
+
+/* isolation 속성 */
+.bootcamp {
+  border: 1px solid green;
+  position: relative;
+  block-size: 250px;
+  background: yellow;
+  /* isolation 속성에 isolate 값을 주면 이미지도 보이고 이미지 외에 배경색을 줄 수 있음 */
+  isolation: isolate;
+
+  img {
+    position: absolute;
+    inset: 0 auto auto 0;
+    /* 음수 값을 주게되면 body 밑으로 내려가서 이미지가 보이지 않음 */
+    z-index: -1;
+  }
+
+  p {
+    font-size: 24px;
+    font-weight: 700;
+    color: blue;
+  }
+}
