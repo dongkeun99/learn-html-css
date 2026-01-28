@@ -26,7 +26,6 @@
 
 /* 공지사항 */
 .notice {
-  background: yellow;
   display: flex;
   flex-flow: nowrap row;
   inline-size: 100%;
