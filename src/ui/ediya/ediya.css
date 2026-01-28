@@ -113,6 +113,7 @@
     column-gap: 10px;
 
     &:nth-child(n + 2) {
+      margin-block-start: 4px;
     }
 
     a {
