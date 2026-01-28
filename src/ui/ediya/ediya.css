@@ -24,6 +24,7 @@
   --text-color: var(--black);
 }
 
+/* 공지사항 */
 .notice {
   background: yellow;
   display: flex;
@@ -81,6 +82,79 @@
       font-size: 14px;
       line-height: 1.5;
       margin-block-start: 10px;
+    }
+  }
+}
+
+/* 뉴스 */
+.news {
+  background: var(--blue-200);
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-between;
+  row-gap: 15px;
+
+  .news-headline {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .news-list {
+    font-size: 14px;
+    order: 1;
+    inline-size: 100%;
+  }
+
+  .news-item {
+    display: flex;
+    flex-flow: nowrap row;
+    column-gap: 10px;
+
+    &:nth-child(n + 2) {
+    }
+
+    a {
+      /* grow: 1 shrink:1 basis: 0 */
+      flex: 1;
+      /* 블록 요소에만 사용 가능 */
+      /* 줄바꿈이 되지 않지만 부모를 넘어서 overflow 됨 */
+      white-space: nowrap;
+      /* overflow 된 것을 보여주지 않기 위함 */
+      overflow: hidden;
+      /* 공간이 부족하면 말줄임(...)으로 표시 */
+      text-overflow: ellipsis;
+    }
+
+    time {
+      /* grow: 0 shrink: 0 basis: auto */
+      flex: none;
+    }
+  }
+
+  .news-more {
+    display: block;
+    inline-size: 16px;
+    block-size: 16px;
+  }
+}
+
+/* 레이아웃 */
+.ediya-content {
+  @media (width >= 1024px) {
+    background: var(--blue-200);
+    inline-size: 80%;
+    margin-inline: auto;
+    display: flex;
+    flex-flow: nowrap row;
+
+    .youtube {
+      flex: 1;
+    }
+
+    .notice-news-wrapper {
+      flex: 1;
     }
   }
 }
