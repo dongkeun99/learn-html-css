@@ -202,9 +202,12 @@
 }
 
 /* auto-fill / auto-fit */
+/* auto-fill은 설정된 너비가 허용하는 만큼 최대한 셀을 채운다. 너비보다 셀이 모자라면 모자란 대로 둔다. */
+/* auto-fit은 너비보다 셀이 모자란 경우 빈 공간을 남겨두지 않고 꽉 맞춰서 채운다. */
+/* 미디어 쿼리 없이 반응형 레이아웃을 만들 수 있다. */
 .frontend {
   box-shadow: 0 0 0 2px red;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-auto-rows: 50px;
 }
