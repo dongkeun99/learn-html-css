@@ -1,6 +1,6 @@
 .like {
   background: var(--mint);
-  /* 다단 갯수 - column-count */
+  /* 다단 갯수 */
   column-count: 2;
   /* 단 구분선 */
   column-rule: 3px double red;
@@ -10,7 +10,7 @@
 
 .lion {
   background: var(--pink);
-  /* 단 너비 - */
+  /* 단 너비 */
   column-width: 150px;
 
   span {
