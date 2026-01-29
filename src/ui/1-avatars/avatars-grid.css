@@ -1,0 +1,30 @@
+.avatars {
+  display: grid;
+  inline-size: 400px;
+  block-size: 200px;
+  grid-template-columns: 100px 100px 100px 100px;
+  gap: 10px;
+
+  .avatar {
+    display: flex;
+    flex-flow: nowrap row;
+    inline-size: 100px;
+    border: 0;
+    padding: 0;
+    background: #fff;
+
+    img {
+      border-radius: 50%;
+    }
+
+    span {
+      display: grid;
+      background: green;
+      block-size: 24px;
+      place-self: end;
+      padding-inline-end: 24px;
+      translate: -24px;
+      border-radius: 50%;
+    }
+  }
+}
