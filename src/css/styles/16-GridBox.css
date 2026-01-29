@@ -3,7 +3,8 @@
 .lion,
 .euid,
 .bootcamp,
-.frontend {
+.frontend,
+.school {
   > div:nth-child(1) {
     background: var(--pink);
   }
@@ -28,21 +29,33 @@
 }
 
 /* grid 컨테이너 설정 */
-/* grid-template 설정 */
 .like {
+  box-shadow: 0 0 0 2px red;
   display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows: 50px 50px;
+  inline-size: 300px;
+  block-size: 300px;
+  /* grid-template 설정 */
+  grid-template-columns: 50px 50px 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px 50px 50px;
+  /* 정렬 - 컨테이너 정렬 */
+  justify-content: space-between;
+  align-content: stretch;
+  /* dense - 빈 공간에 밀집하여 배치 가능 */
+  grid-auto-flow: dense;
+
+  > div:nth-child(odd),
+  .like2 {
+    grid-column: span 2;
+  }
 }
 
 /* grid 아이템 배치 - 라인 기반 배치*/
-/* 다양한 단위를 사용하여 트랙 실행 */
 .lion {
   box-shadow: 0 0 0 2px red;
-  font-size: 10px;
   display: grid;
-  grid-template-columns: 50px 10rem 20% 10em 1fr;
-  grid-template-rows: 50px 50px 50px 50px 50px;
+  /* 다양한 단위를 사용하여 트랙 실행 */
+  grid-template-columns: 50px 10rem 20% 1fr;
+  grid-template-rows: 50px 50px 50px 50px;
 
   .lion1 {
     grid-row-start: 4;
@@ -55,13 +68,143 @@
     grid-column: 4/5;
 
     /* 단축 속성의 단축 속성 */
-    grid-area: 4/4/5/5;
+    grid-area: 1/1/4/5;
   }
 
+  /* span 키워드 - 칸 수 지정. span 2는 총 두칸, span 3은 총 세칸 */
+  .lion1 {
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 3;
+  }
+
+  /* 셀 한칸만 선택할 것이라면 start만 명시해줘도 됨 */
   .lion2 {
     grid-row-start: 4;
-    grid-column-start: 1;
-    grid-row-end: 6;
-    grid-column-end: 3;
+    grid-column-start: 4;
   }
+
+  .lion3 {
+    grid-row-start: 1;
+    grid-column-start: 4;
+  }
+
+  .lion4 {
+    grid-row-start: 3;
+    grid-column-start: 1;
+  }
+
+  .lion5 {
+    grid-row: 3 / span 2;
+    grid-column: 2 / span 2;
+  }
+
+  .lion6 {
+    grid-row: 2 / span 2;
+    grid-column-start: 4;
+  }
+
+  .lion7 {
+    grid-row-start: 4;
+    grid-column-start: 1;
+  }
+}
+
+/* gap 지정 */
+.euid {
+  box-shadow: 0 0 0 2px red;
+  display: grid;
+  /* repeat 함수 활용 */
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 50px);
+  grid-template-areas:
+  /* 이름 기반 배치 */
+  /* 중간에 비워놓고 싶으면 '.' 사용 */
+    'header header header header'
+    'nav nav nav side'
+    'main main . side'
+    'footer footer footer footer';
+  /* flex에서 사용하는 gap과 비슷 (gutter) */
+  row-gap: 10px;
+  column-gap: 15px;
+  gap: 10px 15px;
+
+  .header {
+    grid-area: header;
+  }
+
+  .navigation {
+    grid-area: nav;
+  }
+
+  .main {
+    grid-area: main;
+  }
+
+  .sidebar {
+    grid-area: side;
+  }
+
+  .footer {
+    grid-area: footer;
+  }
+}
+
+/* 라인에 이름을 지정하고 배치 */
+.bootcamp {
+  box-shadow: 0 0 0 2px red;
+  display: grid;
+  grid-template-columns: [full-start] 1fr [content-start] repeat(10, 1fr) [content-end] 1fr [full-end];
+  grid-template-rows: repeat(5, 50px);
+
+  .bootcamp1 {
+    grid-column-start: full-start;
+    grid-column-end: full-end;
+    /* 아래와 같이 합칠 수 있음 */
+    grid-column: full;
+  }
+
+  .bootcamp2 {
+    grid-column: content;
+  }
+
+  .bootcamp3 {
+    grid-column: full-start / content-end;
+  }
+
+  .bootcamp4 {
+    grid-column: content-start / full-end;
+  }
+}
+
+/* 정렬 - 아이템 정렬 */
+.school {
+  box-shadow: 0 0 0 2px red;
+  display: grid;
+  inline-size: 300px;
+  block-size: 300px;
+  grid-template-columns: 50px 50px 50px 50px 50px;
+  grid-template-rows: auto auto auto auto auto;
+  justify-items: center;
+  align-items: center;
+  /* place-items: center center; */
+
+  .school7 {
+    justify-self: end;
+    align-self: end;
+    /* place-self: end end; */
+  }
+
+  .school6 {
+    /* place - justify와 align을 같이 주고 싶을 때  */
+    /* 앞이 align, 뒤가 justify */
+    place-self: start end;
+  }
+}
+
+/* auto-fill / auto-fit */
+.frontend {
+  box-shadow: 0 0 0 2px red;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 50px;
 }
