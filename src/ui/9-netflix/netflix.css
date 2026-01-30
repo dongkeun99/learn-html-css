@@ -34,6 +34,7 @@
     position: absolute;
     inset-block-start: 50%;
     translate: 0 -50%;
+    /* none 값은 클릭, 드래그, 마우스 오버 등의 이벤트를 비활성화 */
     pointer-events: none;
 
     &:nth-of-type(1) {
@@ -47,6 +48,7 @@
 
   select {
     inline-size: 100%;
+    /* none - select, button 등 클릭 가능한 태그들의 컨트롤 요소의 기본 모양을 제거 */
     appearance: none;
     border: 0;
     background: transparent;
@@ -108,9 +110,10 @@
   }
 
   &:focus {
+    /* border와 같이 외곽선을 스타일링 가능 */
     outline: 0 none;
   }
-
+  /* 탭으로 이동하는 이벤트 발생 시 내부 태그가 실행됨 */
   &:focus-visible {
     box-shadow: 0 0 0 2px var(--green-500);
   }
@@ -130,6 +133,12 @@
   display: grid;
   grid-template-columns: repeat(12, minmax(100px, 1fr));
   gap: 20px;
+
+  /* 로고 */
+  .brand {
+    grid-column: span 2;
+    place-self: center;
+  }
 
   /* 콤보 박스 */
   .select-box {
