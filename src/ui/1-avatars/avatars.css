@@ -85,7 +85,7 @@
 /* 컴포넌트 */
 /* inline-grid를 이용한 레이아웃 */
 .profile {
-  display: grid;
+  display: inline-grid;
   inline-size: 64px;
   block-size: 64px;
 
@@ -106,6 +106,7 @@
     .state {
       background: green;
       border-radius: 50%;
+      border: 1px solid #fff;
       inline-size: 20px;
       block-size: 20px;
       /* justify-self: end;
@@ -123,8 +124,11 @@
   display: grid;
   border: 1px solid gray;
   padding: 40px;
+  /* repeat(반복 횟수, 반복할 트랙의 크기) */
   grid-template-columns: repeat(var(--columns), 64px);
   gap: 20px;
+  /* max-content: 내부 컨텐츠의 크기에 맞게 박스 사이즈가 맞춰짐(부모보다 오버플로우 되더라도 줄바꿈 안됨) */
+  /* min-content: 내부 텍스트는 모두 줄바꿈이 되며 inline-size는 길이가 가장 긴 단어의 길이와 같음 */
   inline-size: max-content;
 
   @media (width >= 400px) {
