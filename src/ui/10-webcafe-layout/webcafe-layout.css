@@ -1,3 +1,5 @@
+@import '/src/ui/9-netflix/netflix.css';
+
 html,
 body {
   min-block-size: 100%;
@@ -7,11 +9,13 @@ body {
   box-shadow: 0 0 0 2px red;
   block-size: calc(100vh - 150px);
 
+  /* 모바일 */
   @media (width <= 768px) {
     display: flex;
     flex-flow: nowrap column;
   }
 
+  /* 데스크탑 */
   @media (width >= 768px) {
     display: grid;
     grid-template-columns: [full-start] 1fr [content-start] repeat(12, minmax(34px, 76px)) [content-end] 1fr [full-end];
@@ -21,16 +25,78 @@ body {
 
 /* 헤더 */
 .header {
-  background: var(--yellow);
-  block-size: 10%;
+  background: var(--black);
+  padding: 20px;
 
+  /* 모바일 */
+  @media (width <= 768px) {
+    display: flex;
+    flex-flow: nowrap row;
+    gap: 20px;
+    align-items: center;
+  }
+
+  /* 데스크탑 */
   @media (width >= 768px) {
     grid-column: content;
     block-size: auto;
+    display: grid;
+    grid-template-columns: subgrid;
+    align-items: center;
+  }
+
+  .brand {
+    /* 모바일 */
+    @media (width <= 768px) {
+      inline-size: 80px;
+      block-size: 22px;
+      margin-inline-end: auto;
+    }
+
+    /* 데스크탑 */
+    @media (width >= 768px) {
+      grid-column: span 4;
+      justify-self: start;
+      margin-inline-start: 20px;
+    }
+  }
+
+  .select-box {
+    select {
+      color: #999;
+    }
+
+    /* 모바일 */
+    @media (width <= 768px) {
+      padding: 6px;
+
+      select {
+        font-size: 14px;
+      }
+    }
+
+    /* 데스크탑 */
+    @media (width >= 768px) {
+      grid-column: 9 / span 2;
+      justify-self: end;
+    }
+  }
+
+  .button {
+    /* 모바일 */
+    @media (width <= 768px) {
+      font-size: 12px;
+    }
+
+    /* 데스크탑 */
+    @media (width >= 768px) {
+      grid-column: span 2 / content-end;
+      justify-self: start;
+    }
   }
 }
 
-/* 네비게이션 */
+/* 내비게이션 */
 .navigation {
   background: var(--pink);
   block-size: 10%;
@@ -82,16 +148,16 @@ body {
 
 /* 게시판 */
 .board {
-  background: var(--green);
+  background: var(--gray);
 
   @media (width >= 768px) {
     grid-column: content-start / span 4;
   }
 }
 
-/* 인기 사이트 */
+/* 인기사이트 */
 .favorite {
-  background: var(--lavender);
+  background: var(--purple);
 
   @media (width >= 768px) {
     order: 1;
@@ -110,7 +176,7 @@ body {
 
 /* 푸터 */
 .footer {
-  background: var(--purple);
+  background: var(--yellow);
   block-size: 10%;
 
   @media (width >= 768px) {
