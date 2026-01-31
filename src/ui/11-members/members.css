@@ -30,6 +30,8 @@
     }
 
     thead tr {
+      /* sticky = relative + fixed */
+      /* relative와 같이 상대적으로 배치되며 fixed와 같이 스크롤을 해도 화면에서 움직이지 않게 화면에 고정할 수 있다 */
       position: sticky;
       inset-block-start: 0;
     }
@@ -45,6 +47,7 @@
     }
 
     th {
+      /* 화면이 작아져도 줄바꿈 불가 */
       white-space: nowrap;
     }
   }
