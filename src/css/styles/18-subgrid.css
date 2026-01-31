@@ -5,6 +5,7 @@
   padding: 20px;
   display: grid;
   row-gap: 20px;
+  /* x축 y축 흐림정도 확산반경 */
   box-shadow: 4px 4px 2px 0 #787878;
 
   h2 {
@@ -17,10 +18,10 @@
       inline-size: 100%;
       block-size: 100%;
       /* cover는 세로에 맞게 가로를 지정(이미지가 짤릴 수도 있음) */
-      /* contain은 가로에 맞게 세로를 지정 */
+      /* contain은 가로에 맞게 세로를 지정(이미지는 전부 보이지만 작아짐) */
       object-fit: cover;
       /* 원본 이미지의 어느 부분을 화면에 보여줄지 */
-      object-position: 0 20%;
+      object-position: 20% 0;
     }
   }
 
@@ -44,6 +45,8 @@
   align-items: start;
 
   .card {
+    /* 부모 그리드의 라인(row/column)을 자식이 그대로 상속받아 사용 */
+    /* 이미지 크기, 캡션 크기 등 뒤죽박죽이었던 것들이 부모의 row를 따라 일정하게 맞춰짐 */
     grid-template-rows: subgrid;
     grid-row: span 4;
   }
