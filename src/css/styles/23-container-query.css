@@ -1,0 +1,61 @@
+.post {
+    background: var(--yellow);
+    padding: 20px;
+    inline-size: 300px;
+    /* container-type이 지정된 class(post)의 크기에 따라 변함 */
+    container-type: inline-size;
+    /* post라는 클래스를 가진 사이즈를 기준으로 나의 스타일을 만듬 */
+    container-name: post;
+
+    .bootcamp {
+        container-type: inline-size;
+        container-name: bootcamp;
+        /* 단축 속성 */
+        container: bootcamp / inline-size;
+        background: pink;
+    }
+    
+    .card {
+        display: grid;
+        gap: 20px;
+    
+        h3 {
+            color: green;
+        }
+
+        .link-wrapper {
+            display: flex;
+            flex-flow: nowrap column;
+            gap: 10px;
+
+            a {
+              background: var(--dark-blue);
+              color: var(--white);
+              padding: 10px 15px;
+              border-radius: 10px;
+        }
+    }
+  }
+
+  @container bootcamp (width >= 400px) {
+    .card {
+      h3 {
+        color: red;
+      }
+
+      .link-wrapper {
+          flex-direction: row;
+          order: -1;
+      }
+    }
+  }
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr) minmax(500, 1fr));
+
+    .post {
+        inline-size: auto;
+    }
+}
