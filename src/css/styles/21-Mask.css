@@ -1,0 +1,36 @@
+/* 마스크 애니메이션 */
+.like {
+    inline-size: max-content;
+    block-size: 100px;
+    padding: 20px;
+    color: #000;
+    background: #ff000033;
+    align-content: center;
+    /* 불투명한 영역만 보여지고 투명한 영역은 보이지 않음 */
+    mask-image: url(/src/assets/svg/circle.svg);
+    mask-repeat: no-repeat;
+    mask-position: 0 0;
+    transition: all 2s ease-in-out;
+
+    &:hover {
+        mask-position: 100% 0;
+    }
+}
+
+/* 마스크를 활용한 더보기 링크 */
+.lion {
+    background: var(--yellow);
+    inline-size: 400px;
+    block-size: 100px;
+    display: flex;
+    flex-flow: nowrap row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .more {
+        inline-size: 64px;
+        aspect-ratio: 1/1;
+        background: red;
+        mask-image: linear-gradient(to bottom, transparent 0 45%, black 45% 55%, transparent 55% 100%), linear-gradient(to right, transparent 0 45%, black 45% 55%, transparent 55% 100%);
+    }
+}
