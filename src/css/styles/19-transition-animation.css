@@ -30,8 +30,14 @@
   transition-property: background border-radius;
   transition-duration: 2000ms, 1000ms;
   transition-delay: 0ms, 2000ms;
-  transition-timing-function: ease-in-out;
+  /* 단축 속성 */
   transition: background 2000ms 0ms, border-radius 1000ms 2000ms;
+  /* linear - 속도가 처음부터 끝까지 동일 */
+  /* ease - 처음에 천천히 시작했다가 중간에빨라지며, 마지막에 다시 느려짐. ease-in-out과 비슷하지만 마지막 속도보다 시작 속도가 약간 더 빠름 */
+  /* ease-in - 처음에 천천히 시작하여 마지막에 속도를 높임 */
+  /* ease-out - 처음에 빠른 속도로 시작하여 마지막에 천천히 속도를 줄임 */
+  /* ease-in-out - 천천히 시작되어 중간에 빨라지고 마지막에 느려짐 */
+  transition-timing-function: ease-in-out;
 
   &.is-active {
     background: var(--black);
@@ -75,6 +81,7 @@
             /* translate 속성을 사용한 경우 */
             translate: 50px 10px;
             scale: 1.2;
+            border-radius: 50%;
         }
     }
 }
