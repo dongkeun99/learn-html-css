@@ -1,0 +1,80 @@
+/* 공통 스타일 */
+.transition-wrapper {
+  p {
+    padding: 20px;
+  }
+  .toggle {
+    border: 0;
+    padding: 10px;
+    background: var(--dark-blue);
+    color: var(--white);
+    border-radius: 4px;
+    margin-block: 10px;
+  }
+}
+
+/* 배경색상 변경 */
+.like {
+  background: var(--yellow);
+  transition-property: background;
+  transition-duration: 2000ms;
+
+  &.is-active {
+    background: var(--pink);
+  }
+}
+
+/* 배경색상과 둥근모서리 변경 */
+.lion {
+  background: var(--mint);
+  transition-property: background border-radius;
+  transition-duration: 2000ms, 1000ms;
+  transition-delay: 0ms, 2000ms;
+  transition-timing-function: ease-in-out;
+  transition: background 2000ms 0ms, border-radius 1000ms 2000ms;
+
+  &.is-active {
+    background: var(--black);
+    color: var(--white);
+    border-radius: 50px;
+  }
+}
+
+/* 너비 변경 */
+.euid {
+    background: var(--orange);
+    inline-size: 200px;
+    transition-property: inline-size;
+    transition-duration: 1000ms;
+
+    &.is-active {
+        inline-size: 400px;
+    }
+}
+
+/* Transition 관련 속성 */
+/* 이동, 크기 반경 */
+.bootcamp {
+    background: var(--lavender);
+    padding: 20px;
+    overflow: hidden;
+
+    p {
+        border: 1px solid currentColor;
+        inline-size: 400px;
+        /* 기본 값으로 없어도 됨 */
+        transform: translate(0, 0);
+        transition-property: all;
+        transition-duration: 1000ms;
+    }
+
+    &.is-active {
+        p {
+            /* translate 함수를 사용한 경우 */
+            transform: translate(50px, 10px);
+            /* translate 속성을 사용한 경우 */
+            translate: 50px 10px;
+            scale: 1.2;
+        }
+    }
+}
