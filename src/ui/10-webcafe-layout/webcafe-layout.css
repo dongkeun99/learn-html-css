@@ -10,7 +10,7 @@ body {
   block-size: calc(100vh - 150px);
 
   /* 모바일 */
-  @media (width <= 768px) {
+  @media (width < 768px) {
     display: flex;
     flex-flow: nowrap column;
   }
@@ -29,7 +29,7 @@ body {
   padding: 20px;
 
   /* 모바일 */
-  @media (width <= 768px) {
+  @media (width < 768px) {
     display: flex;
     flex-flow: nowrap row;
     gap: 20px;
@@ -47,7 +47,7 @@ body {
 
   .brand {
     /* 모바일 */
-    @media (width <= 768px) {
+    @media (width < 768px) {
       inline-size: 80px;
       block-size: 22px;
       margin-inline-end: auto;
@@ -67,7 +67,7 @@ body {
     }
 
     /* 모바일 */
-    @media (width <= 768px) {
+    @media (width < 768px) {
       padding: 6px;
 
       select {
@@ -84,7 +84,7 @@ body {
 
   .button {
     /* 모바일 */
-    @media (width <= 768px) {
+    @media (width < 768px) {
       font-size: 12px;
     }
 
@@ -109,7 +109,7 @@ body {
 
 /* 메인 */
 .main {
-  @media (width <= 768px) {
+  @media (width < 768px) {
     flex: 1;
     display: flex;
     flex-flow: wrap row;
