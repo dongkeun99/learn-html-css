@@ -5,6 +5,10 @@ body {
   background: linear-gradient(-45deg, #ffc, #fcf, #cff, #cfc, #ccc);
 }
 
+li {
+  margin-block-end: 4px;
+}
+
 /* 하이퍼 링크 스타일 */
 a {
   text-decoration: none;
@@ -26,27 +30,14 @@ a {
   }
 }
 
-.container {
+h1 {
   display: flex;
   flex-flow: nowrap row;
-  background: yellow;
+  inline-size: 100%;
+}
 
-  h1 {
-    background: pink;
-    block-size: 100%;
-    inline-size: 100%;
-  }
-
-  .group-markup {
-    background: aqua;
-    /* inline-size: 100%; */
-  }
-
-  .group-styling {
-    background: lavender;
-  }
-
-  .group-ui {
-    background: red;
-  }
+.group {
+  display: flex;
+  flex-flow: nowrap row;
+  column-gap: 40px;
 }
