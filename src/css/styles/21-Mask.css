@@ -9,10 +9,12 @@
   /* 불투명한 영역만 보여지고 투명한 영역은 보이지 않음 */
   mask-image: url(/src/assets/svg/circle.svg);
   mask-repeat: no-repeat;
+  /* 원이 처음에 있을 위치를 정함 */
   mask-position: 0 0;
   transition: all 2s ease-in-out;
 
   &:hover {
+    /* 마우스를 올렸을 때 어디까지 갈 지를 정함 */
     mask-position: 100% 0;
   }
 }
@@ -22,6 +24,7 @@
   background: var(--yellow);
   inline-size: 400px;
   block-size: 100px;
+  margin-block-start: 20px;
   display: flex;
   flex-flow: nowrap row;
   align-items: center;
