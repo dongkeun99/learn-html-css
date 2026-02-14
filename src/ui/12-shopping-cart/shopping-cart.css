@@ -29,9 +29,10 @@ body {
   font-weight: 700;
 }
 
-/* 상품 */
+/* 장바구니 상품 */
 .shopping-cart-product {
   --size: 64px;
+
   display: grid;
   grid-template-columns: 64px minmax(max-content, 1fr);
   column-gap: 12px;
@@ -83,7 +84,7 @@ body {
       display: block;
       inline-size: 6px;
       block-size: 1px;
-      background: var(--gray-200);
+      background: var(--gray-500);
       margin-inline: auto;
       rotate: 90deg;
       grid-area: 1/1/2/2;
@@ -98,6 +99,7 @@ body {
     background: transparent;
     padding: 0;
     display: inline-grid;
+    /* align-items와 justify-items의 단축 속성 */
     place-items: center;
 
     /* before, after는 인라인 속성 */
@@ -105,7 +107,7 @@ body {
       content: '';
       inline-size: 6px;
       block-size: 1px;
-      background: var(--gray-200);
+      background: var(--gray-500);
       grid-area: 1/1/2/2;
     }
   }
