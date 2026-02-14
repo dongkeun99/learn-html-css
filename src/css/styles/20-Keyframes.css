@@ -1,9 +1,12 @@
 /* 공통 스타일 */
 .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 20px;
-    inline-size: max-content;
+  display: grid;
+  /* auto-fit : 화면 크기에 맞춰 자동으로 칸 개수를 계산 */
+  /* minmax(400px, 1fr) : 400px은 절대 줄어들지 않는 최소 크기, 1fr은 남은 공간을 나눠 먹는 비율 */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  /* 내용이 다 들어갈 만큼만 딱 맞게 늘어나라 */
+  inline-size: max-content;
 }
 
 .keyframes-wrapper {
@@ -49,68 +52,66 @@
 .fade {
   animation-name: fade;
   animation-duration: 2s;
-  
 }
 
 /* Shrink */
 .shrink {
-    animation-name: shrink;
-    animation-duration: 2s;
+  animation-name: shrink;
+  animation-duration: 2s;
 }
 
 /* Bounce */
 .bounce {
-    animation-name: bounce;
-    animation-duration: 1s;
+  animation-name: bounce;
+  animation-duration: 1s;
 }
 
 /* Spin */
 .spin.target-animation {
-    inline-size: 100px;
-    block-size: 100px;
-    border-radius: 50%;
-    text-align: center;
-    align-content: center;
-    background: conic-gradient(from 0.25turn, red, green, blue, yellow);
-    background: conic-gradient(red 0% 25%, green 25% 50%, blue 50% 75%, yellow 75% 100%);
-    animation-name: spin;
-    animation-duration: 2s;
-    /* 위에서 alternate를 줘서 정상 작동 불가. normal을 주면 정상 작동 */
-    animation-direction: normal;
-    /* 한바퀴씩 끊기는 것 방지. 자연스럽게 돌아감 */
-    animation-timing-function: linear;
+  inline-size: 100px;
+  block-size: 100px;
+  border-radius: 50%;
+  text-align: center;
+  align-content: center;
+  background: conic-gradient(from 0.25turn, red, green, blue, yellow);
+  background: conic-gradient(red 0% 25%, green 25% 50%, blue 50% 75%, yellow 75% 100%);
+  animation-name: spin;
+  animation-duration: 2s;
+  /* 위에서 alternate를 줘서 정상 작동 불가. normal을 주면 정상 작동 */
+  animation-direction: normal;
+  /* 한바퀴씩 끊기는 것 방지. 자연스럽게 돌아감 */
+  animation-timing-function: linear;
 }
 
 /* Angle */
 .angle.target-animation {
-    --angle: 0deg;
+  --angle: 0deg;
 
-    inline-size: 100px;
-    block-size: 100px;
-    text-align: center;
-    align-content: center;
-    background: var(--black);
-    color: var(--white);
+  inline-size: 100px;
+  block-size: 100px;
+  text-align: center;
+  align-content: center;
+  background: var(--black);
+  color: var(--white);
+  border-radius: 10px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background: conic-gradient(from var(--angle), red 0 25%, transparent 25% 100%);
+    inline-size: 110%;
+    block-size: 110%;
+    inset: 50% auto auto 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    isolation: isolate;
     border-radius: 10px;
-    position: relative;
-    
-
-    &::after {
-        content: '';
-        position: absolute;
-        background: conic-gradient(from var(--angle), red 0 25%, transparent 25% 100%);
-        inline-size: 110%;
-        block-size: 110%;
-        inset: 50% auto auto 50%;
-        translate: -50% -50%;
-        z-index: -1;
-        isolation: isolate;
-        border-radius: 10px;
-        animation-name: angle;
-        animation-duration: infinite;
-        animation-timing-function: linear;
-        animation-direction: normal;
-        /* 위 4개 속성의 단축 속성 */
-        animation: angle 1s infinite linear normal;
-    }
+    animation-name: angle;
+    animation-duration: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    /* 위 4개 속성의 단축 속성 */
+    animation: angle 1s infinite linear normal;
+  }
 }
