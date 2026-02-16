@@ -1,42 +1,48 @@
 .post {
-    background: var(--yellow);
-    padding: 20px;
-    inline-size: 300px;
-    /* container-type이 지정된 class(post)의 크기에 따라 변함 */
+  background: var(--yellow);
+  padding: 20px;
+  inline-size: 300px;
+  /* container-type이 지정된 class(post)의 크기에 따라 변함 */
+  container-type: inline-size;
+  /* post라는 클래스를 가진 사이즈를 기준으로 나의 스타일을 만듬 */
+  container-name: post;
+
+  .bootcamp {
     container-type: inline-size;
-    /* post라는 클래스를 가진 사이즈를 기준으로 나의 스타일을 만듬 */
-    container-name: post;
-
-    .bootcamp {
-        container-type: inline-size;
-        container-name: bootcamp;
-        /* 단축 속성 */
-        container: bootcamp / inline-size;
-        background: pink;
-    }
-    
-    .card {
-        display: grid;
-        gap: 20px;
-    
-        h3 {
-            color: green;
-        }
-
-        .link-wrapper {
-            display: flex;
-            flex-flow: nowrap column;
-            gap: 10px;
-
-            a {
-              background: var(--dark-blue);
-              color: var(--white);
-              padding: 10px 15px;
-              border-radius: 10px;
-        }
-    }
+    container-name: bootcamp;
+    /* 단축 속성 */
+    container: bootcamp / inline-size;
+    background: pink;
   }
 
+  .card {
+    display: grid;
+    gap: 20px;
+
+    h3 {
+      color: green;
+    }
+
+    .link-wrapper {
+      display: flex;
+      flex-flow: nowrap column;
+      gap: 10px;
+
+      a {
+        background: var(--dark-blue);
+        color: var(--white);
+        padding: 10px 15px;
+        border-radius: 10px;
+      }
+
+      a:hover {
+        background: var(--white);
+        color: var(--dark-blue);
+      }
+    }
+  }
+  /* 컨테이너 쿼리는 화면 전체가 아니라 부모 상자의 크기를 보고 스타일을 바꿈 */
+  /* 미디어 쿼리는 화면 전체의 크기를 보고 스타일을 바꿈 */
   @container bootcamp (width >= 400px) {
     .card {
       h3 {
@@ -44,18 +50,19 @@
       }
 
       .link-wrapper {
-          flex-direction: row;
-          order: -1;
+        flex-direction: row;
+        order: -1;
       }
     }
   }
 }
 
 .grid-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr) minmax(500, 1fr));
+  display: grid;
+  /* 작은 사이즈는 400px 필요, 큰 사이즈는 500px 필요한데 이 두칸을 한 세트로 묶어서 반복. 한 번 반복할 때 총 900px */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr) minmax(500px, 1fr));
 
-    .post {
-        inline-size: auto;
-    }
+  .post {
+    inline-size: auto;
+  }
 }
