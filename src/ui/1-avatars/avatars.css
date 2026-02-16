@@ -104,11 +104,11 @@
     display: contents;
 
     .state {
-      background: green;
+      background: #03cc5c;
       border-radius: 50%;
       border: 1px solid #fff;
-      inline-size: 20px;
-      block-size: 20px;
+      inline-size: 16px;
+      block-size: 16px;
       /* justify-self: end;
       align-self: end; */
       place-self: end;
@@ -122,7 +122,7 @@
   --columns: 1;
 
   display: grid;
-  border: 1px solid gray;
+  border: 1px solid black;
   padding: 40px;
   /* repeat(반복 횟수, 반복할 트랙의 크기) */
   grid-template-columns: repeat(var(--columns), 64px);
