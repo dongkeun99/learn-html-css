@@ -26,6 +26,7 @@
   .notification-icon {
     inline-size: var(--icon-size);
     block-size: var(--icon-size);
+    /* 커지지도, 줄어들지도 않고 기본 크기는 원래 크기 */
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
@@ -35,6 +36,7 @@
   .notification-content {
     position: relative;
     /* flex-grow: 1 , flex-shrink: 1 , flex-basis: 0 */
+    /* 기본 크기는 0에서 시작하고 남는 공간을 다 같이 1:1로 나누기 */
     flex: 1;
   }
 
@@ -62,9 +64,6 @@
 
 /* 레이아웃 */
 /* flex (column) 일 경우 - 1단 */
-/* 최소 크기가 동작하지 않음. 확인 필요 */
-/* min-width: 200px; */
-/* width: clamp(200px, 10vw, 400px); */
 /* .notifications {
   display: flex;
   flex-flow: nowrap column;
