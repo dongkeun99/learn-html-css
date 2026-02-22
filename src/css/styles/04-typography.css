@@ -121,3 +121,14 @@ body {
     700 italic small-caps 20px/1.5 'SUIT Variable',
     sans-serif;
 }
+
+/* 부모 사이즈 = 자식 사이즈
+line-height의 percentage나 number가 높아질수록 간격도 넓어짐(줄어들수록 간격도 줄어듦)
+
+부모 사이즈 > 자식 사이즈
+percentage로 줬을 때: 현재 폰트 사이즈 * 퍼센티지
+number로 줬을 때: 부모의 것을 상속 받아도 나의 것이 우선
+
+부모 사이즈 < 자식 사이즈
+percentage로 줬을 때: 상속받은 line-height보다 나의 font-size가 더 크므로 겹침
+number로 줬을 때: 나의 것 우선, 겹치지 않음 */
